@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body >
+    <h1>Fillter Image</h1>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    <br><br>
+
+    <ul id="myUL">
+        <li>  <a style="color: white;" href="https://computing.kau.edu.sa/Default-611-EN">
+            <img src="p1Bgg.png" height="200px">FCIT</a>
+        </li>
+
+        <hr>
+        <br>
+
+        <li>  <a style="color: white;" href="http://beyadi.net/">
+            <img src="h.png" height="200px">Take_my_hand</a>
+        </li>
+
+        <hr>
+        <br>
+
+        <li>  <a style="color: white;" href="https://twitter.com/fcit_council">
+            <img src="المجلس الطلابي.png" height="200px">Students_Council</a>
+        </li>
+
+        <hr>
+        <br>
+
+        <li>  <a style="color: white;" href="https://www.linkedin.com/in/mohammed-eid-675427189/">
+            <img src="TEAM (9).png" height="200px">FCIT_Team</a>
+        </li>
+
+        <hr>
+        <br>
+
+        <li>  <a style="color: white;" href="https://www.linkedin.com/in/mohammed-eid-675427189/">
+            <img src="Archry.png" height="200px">Archry_Team</a>
+        </li>
+
+    </ul>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+        </script>
+          <form method="get" action="1.html">
+            <button type="submit">Back</button>
+        </form>
+        <br>
+
+        <form method="get" action="3.html">
+            <button type="submit">Continue</button>
+        </form>
+        
+</body>
+</html>
